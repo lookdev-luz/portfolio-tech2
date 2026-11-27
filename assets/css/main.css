@@ -4,3 +4,20 @@
 @media(max-width:370px){.section{padding-left:16px;padding-right:16px}.hero h1{font-size:2.75rem}.actions .button{width:100%;justify-content:center}.bento{grid-template-rows:225px 185px 155px 145px}.bento article{padding:12px}.bento-intro h3{font-size:1.2rem}.bento-availability{gap:5px}.bento-availability small{font-size:.49rem}.bento-availability h3{font-size:.75rem}.orbit-stage{width:280px}.tech-node{transform:rotate(calc(var(--i)*360deg/var(--total))) translateY(-120px) rotate(calc(var(--i)*-360deg/var(--total)));min-width:64px;font-size:.69rem}.orbit-center{width:88px}.wizard-controls{gap:8px}.wizard-controls .button{font-size:.84rem}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.js-motion .section,.js-motion .service-card,.js-motion .timeline article{opacity:1;transform:none}}
 #wizard-content label{display:grid;grid-template-columns:20px 1fr;align-items:start;column-gap:10px}#wizard-content label input{grid-row:span 2;margin-top:3px}#wizard-content label small{grid-column:2;color:var(--muted);font-size:.76rem;letter-spacing:0;text-transform:none;line-height:1.45}.wizard-intro{font-size:.91rem;margin:-8px 0 14px}.wizard-error{color:#ffb8c1!important;font-size:.88rem}.contact-links>a:not(.button):hover,.service-card>a:hover,.open-project:hover{color:#fff}
+
+/* A órbita é decorativa; seus controles permanecem dentro da área visível. */
+.orbit-stage{max-width:100%;overflow:clip}
+@media(max-width:680px){.ecosystem,.orbit-stage{min-width:0}.tech-node{max-width:100%}.js-motion .section,.js-motion .service-card,.js-motion .timeline article{opacity:1;transform:none}}
+
+/* Contém apenas a arte orbital que extrapola o quadro visual. */
+.horizon-art{overflow:visible}
+@media(max-width:1024px){.ecosystem{min-width:0}.orbit-stage{overflow:clip}.tech-node{transform:none;position:relative;inset:auto;display:inline-flex;margin:.25rem}.ecosystem .orbit-stage{display:flex;flex-wrap:wrap;align-content:center;justify-content:center}}
+
+/* O espaço externo da arte contém as órbitas completas. */
+.horizon-art{padding:2.5rem;box-sizing:border-box}.core-sphere{max-width:min(75%,300px)}.core-orbit{max-width:105%}.orbit-stage{overflow:visible;max-width:calc(100% - 7rem);margin:3.5rem auto}.timeline:before{left:20px}.timeline article{grid-template-columns:42px minmax(0,1fr);gap:24px}.timeline article>span{justify-self:center}.timeline article h3,.timeline article p{max-width:60ch}@media(max-width:1024px){.ecosystem .orbit-stage{width:100%;max-width:100%;height:auto;min-height:230px;aspect-ratio:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(105px,1fr));gap:.5rem;padding:1rem}.orbit-center,.orbit-track{display:none}.tech-node{position:static;transform:none!important;width:100%;justify-content:center;margin:0}}
+
+@media(min-width:1025px){.tech-node{transform:translate(-50%,-50%) rotate(calc(var(--i)*360deg/var(--total))) translateY(calc(min(450px,38vw)*-.36)) rotate(calc(var(--i)*-360deg/var(--total)))}}
+/* Ajuste geométrico das órbitas para manter o contorno dentro da cena. */
+.core-orbit.orbit-c{transform:rotate(73deg) scale(.94)}
+@media(max-width:680px){.core-orbit.orbit-a{transform:rotate(-27deg) scale(.88)}.core-orbit.orbit-b{transform:rotate(43deg) scale(.82)}.core-orbit.orbit-c{transform:rotate(73deg) scale(.68)}}
+@media(min-width:681px) and (max-width:1024px){.core-orbit.orbit-c{transform:rotate(73deg) scale(.78)}}
